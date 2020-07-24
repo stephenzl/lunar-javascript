@@ -98,7 +98,7 @@
           var f = SolarUtil.FESTIVAL[this._p.month+'-'+this._p.day];
           if(f) l.push(f);
           var week = this.getWeek();
-          var weekInMonth = Math.floor((this._p.day-week-1)/7) + 1;
+          var weekInMonth = Math.floor(Math.abs((this._p.day-week-1)/7)) + 1;
           // if(week>0) weekInMonth++;
           f = SolarUtil.WEEK_FESTIVAL[this._p.month+'-'+weekInMonth+'-'+week];
           if(f) l.push(f);
